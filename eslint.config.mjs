@@ -1,7 +1,6 @@
-import js from '@eslint/js'
-import nodePlugin from 'eslint-plugin-n'
-import globals from 'globals'
-
+import js from '@eslint/js';
+import nodePlugin from 'eslint-plugin-n';
+import globals from 'globals';
 
 export default [
   js.configs.recommended,
