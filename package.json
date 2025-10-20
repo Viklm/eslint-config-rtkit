@@ -1,20 +1,12 @@
 {
     "name": "eslint-config-rtkit",
-    "version": "1.0.0",
-    "main": "index.js",
-    "exports": {
-        ".": "./configs/base.js",
-        "./ts": "./configs/typescript.js",
-        "./react": "./configs/react.js"
-    },
+    "version": "2.0.0",
     "description": "Set of configurations for Rostelecom IT projects",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/rtkit-ulsk/eslint-config-rtkit"
-    },
     "keywords": [
-        "style guide",
         "eslint",
+        "eslintconfig",
+        "eslint-config",
+        "style guide",
         "lint",
         "rtkit",
         "es6",
@@ -24,33 +16,56 @@
         "jsx",
         "tsx"
     ],
+    "main": "./dist/index.js",
+    "exports": "./dist/index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/rtkit-ulsk/eslint-config-rtkit"
+    },
     "contributors": [
         {
             "name": "Konstantin Pogodin",
             "url": "https://github.com/gadzillllla"
         }
     ],
-    "license": "MIT",
     "bugs": {
         "url": "https://github.com/rtkit-ulsk/eslint-config-rtkit/issues"
     },
     "homepage": "https://github.com/rtkit-ulsk/eslint-config-rtkit",
-    "engines": {
-        "node": ">=16.0.0"
+    "files": [
+        "/dist",
+        "README.md",
+        "package.json"
+    ],
+    "scripts": {
+        "build": "rm -rf ./dist && mkdir ./dist && cp -r ./lib/* ./dist",
+        "pack": "npm pack --pack-destination=./dist"
     },
     "dependencies": {
-        "@babel/core": "^7.22.5",
-        "@babel/eslint-parser": "^7.22.5",
-        "@babel/preset-react": "^7.22.5",
-        "@typescript-eslint/eslint-plugin": "^5.59.11",
-        "@typescript-eslint/parser": "^5.59.9",
-        "eslint": "^8.41.0",
+        "@eslint/eslintrc": "^3.3.1",
+        "@eslint/js": "^9.35.0",
+        "@typescript-eslint/eslint-plugin": "^8.43.0",
+        "eslint": "^9.35.0",
+        "eslint-config-prettier": "^10.1.8",
+        "eslint-doc-generator": "^2.0.0",
+        "eslint-import-resolver-typescript": "^4.4.4",
         "eslint-plugin-destructuring": "^2.2.1",
-        "eslint-plugin-import": "^2.27.5",
-        "eslint-plugin-jsx-a11y": "^6.7.1",
-        "eslint-plugin-prettier": "^4.2.1",
-        "eslint-plugin-react": "^7.32.2",
-        "eslint-plugin-simple-import-sort": "^10.0.0",
-        "prettier": "^2.8.8"
-    }
+        "eslint-plugin-import": "^2.32.0",
+        "eslint-plugin-jsx-a11y": "^6.10.2",
+        "eslint-plugin-prettier": "^5.5.4",
+        "eslint-plugin-react": "^7.37.5",
+        "eslint-plugin-simple-import-sort": "^12.1.1",
+        "globals": "^16.4.0",
+        "typescript-eslint": "^8.43.0"
+    },
+    "devDependencies": {
+        "eslint-plugin-n": "^17.0.0"
+    },
+    "engines": {
+        "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+    },
+    "peerDependencies": {
+        "eslint": ">=9.0.0"
+    },
+    "license": "MIT"
 }
