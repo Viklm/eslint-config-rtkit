@@ -1,7 +1,8 @@
 {
     "name": "eslint-config-rtkit",
-    "version": "2.0.0",
+    "version": "3.0.2",
     "description": "Set of configurations for Rostelecom IT projects",
+    "type": "module",
     "keywords": [
         "eslint",
         "eslintconfig",
